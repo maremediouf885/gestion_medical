@@ -1,0 +1,48 @@
+# 🚀 COMMANDES GITHUB - À EXÉCUTER
+
+# 1. Aller dans le dossier du projet
+cd d:\gestion_medical\gestion_medical
+
+# 2. Initialiser Git
+git init
+
+# 3. Ajouter tous les fichiers
+git add .
+
+# 4. Premier commit
+git commit -m "🏥 Initial commit - Système de Gestion Médicale
+
+✅ Fonctionnalités complètes:
+- Gestion patients et pèlerins  
+- Système de vaccination
+- Rendez-vous médicaux
+- Stock des vaccins
+- Personnel médical
+- Interface responsive moderne
+
+🛠️ Stack technique:
+- Laravel 11
+- PHP 8.2+
+- MySQL/SQLite
+- Tailwind CSS
+- Font Awesome
+
+📧 Développé par: maremediouf885@gmail.com
+🚀 Prêt pour déploiement production"
+
+# 5. Créer le repository sur GitHub
+# Aller sur: https://github.com/new
+# Nom: gestion_medical
+# Description: Système de gestion médicale complet avec Laravel 11
+
+# 6. Ajouter le remote GitHub
+git remote add origin https://github.com/maremediouf885/gestion_medical.git
+
+# 7. Renommer la branche principale
+git branch -M main
+
+# 8. Push vers GitHub
+git push -u origin main
+
+echo "🎉 Projet pushé sur GitHub avec succès !"
+echo "📍 URL: https://github.com/maremediouf885/gestion_medical"

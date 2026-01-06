@@ -1,5 +1,5 @@
+# Laravel
 /node_modules
-/public/build
 /public/hot
 /public/storage
 /storage/*.key
@@ -7,12 +7,39 @@
 .env
 .env.backup
 .env.production
+.env.production.*
 .phpunit.result.cache
+docker-compose.override.yml
 Homestead.json
 Homestead.yaml
-auth.json
 npm-debug.log
 yarn-error.log
-/.fleet
 /.idea
 /.vscode
+
+# Database
+database.sqlite
+*.sql
+*.db
+
+# Logs
+storage/logs/*.log
+laravel.log
+
+# Cache
+bootstrap/cache/*.php
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+
+# Uploads
+public/uploads/*
+storage/app/public/*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Deployment
+deploy.zip
+*.zip

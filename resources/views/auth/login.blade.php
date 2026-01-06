@@ -28,15 +28,15 @@
                 <form method="POST" action="{{ route('login') }}" class="space-y-6">
                     @csrf
 
-                    <!-- Email Address -->
+                    <!-- Login (Email ou Username) -->
                     <div>
-                        <label for="email" class="block text-sm font-medium text-white mb-2">
-                            <i class="fas fa-envelope mr-2"></i>Adresse Email
+                        <label for="login" class="block text-sm font-medium text-white mb-2">
+                            <i class="fas fa-user mr-2"></i>Email ou Nom d'utilisateur
                         </label>
-                        <input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus
+                        <input id="login" type="text" name="login" value="{{ old('login') }}" required autofocus
                                class="w-full px-4 py-3 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 transition-all"
-                               placeholder="admin@gestion-medical.com">
-                        <x-input-error :messages="$errors->get('email')" class="mt-2 text-red-300" />
+                               placeholder="admin@gestion-medical.com ou admin">
+                        <x-input-error :messages="$errors->get('login')" class="mt-2 text-red-300" />
                     </div>
 
                     <!-- Password -->
@@ -67,6 +67,7 @@
                 <div class="mt-6 p-4 bg-blue-500 bg-opacity-20 rounded-lg border border-blue-400 border-opacity-30">
                     <h3 class="text-white font-semibold mb-2"><i class="fas fa-info-circle mr-2"></i>Compte de test</h3>
                     <p class="text-blue-100 text-sm">Email: admin@gestion-medical.com</p>
+                    <p class="text-blue-100 text-sm">Username: admin</p>
                     <p class="text-blue-100 text-sm">Mot de passe: admin123</p>
                 </div>
             </div>

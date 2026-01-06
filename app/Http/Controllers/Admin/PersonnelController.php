@@ -28,14 +28,27 @@ class PersonnelController extends Controller
             'password' => 'required|string|min:8',
         ]);
 
+        // Générer un username automatiquement
+        $username = strtolower(str_replace(' ', '.', $request->name));
+        $originalUsername = $username;
+        $counter = 1;
+        
+        // Vérifier l'unicité du username
+        while (User::where('username', $username)->exists()) {
+            $username = $originalUsername . $counter;
+            $counter++;
+        }
+
         User::create([
             'name' => $request->name,
+            'username' => $username,
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'role' => 'personnel',
         ]);
 
-        return redirect()->route('admin.personnel.index')->with('success', 'Personnel créé avec succès');
+        return redirect()->route('admin.personnel.index')
+            ->with('success', 'Personnel créé avec succès. Username: ' . $username);
     }
 
     public function show(User $personnel)

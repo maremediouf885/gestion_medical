@@ -26,7 +26,6 @@ class ConsultationController extends Controller
         $request->validate([
             'patient_id' => 'required|exists:patients,id',
             'date_consultation' => 'required|date',
-            'type_consultation' => 'required|string|max:255',
             'notes' => 'required|string',
         ]);
 
@@ -34,7 +33,6 @@ class ConsultationController extends Controller
             'patient_id' => $request->patient_id,
             'user_id' => auth()->id(),
             'date_consultation' => $request->date_consultation,
-            'type_consultation' => $request->type_consultation,
             'notes' => $request->notes,
         ]);
 
@@ -57,7 +55,6 @@ class ConsultationController extends Controller
         $request->validate([
             'patient_id' => 'required|exists:patients,id',
             'date_consultation' => 'required|date',
-            'type_consultation' => 'required|string|max:255',
             'notes' => 'required|string',
         ]);
 

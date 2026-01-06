@@ -13,7 +13,6 @@ class Consultation extends Model
         'patient_id',
         'user_id',
         'date_consultation',
-        'type_consultation',
         'notes',
     ];
 

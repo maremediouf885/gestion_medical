@@ -72,13 +72,13 @@
                         @endif
                         
                         @if(Auth::user()->isPersonnel())
-                        <a href="{{ route('personnel.consultations.index') }}" style="background: #059669 !important; color: white !important; padding: 2rem !important; border-radius: 1rem !important; text-align: center !important; box-shadow: 0 25px 50px rgba(0,0,0,0.15) !important; transition: all 0.3s ease !important; display: block !important; text-decoration: none !important;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 35px 70px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='0 25px 50px rgba(0,0,0,0.15)';">
+                        <a href="{{ route('patients.index') }}" style="background: #059669 !important; color: white !important; padding: 2rem !important; border-radius: 1rem !important; text-align: center !important; box-shadow: 0 25px 50px rgba(0,0,0,0.15) !important; transition: all 0.3s ease !important; display: block !important; text-decoration: none !important;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 35px 70px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='0 25px 50px rgba(0,0,0,0.15)';">
                             <div style="display: flex !important; flex-direction: column !important; align-items: center !important;">
                                 <div style="background: rgba(255,255,255,0.2) !important; padding: 1.5rem !important; border-radius: 50% !important; margin-bottom: 1.5rem !important;">
-                                    <i class="fas fa-stethoscope" style="font-size: 3rem !important; color: white !important;"></i>
+                                    <i class="fas fa-user-injured" style="font-size: 3rem !important; color: white !important;"></i>
                                 </div>
-                                <h4 style="font-weight: bold !important; font-size: 1.5rem !important; margin-bottom: 0.75rem !important; color: white !important;">CONSULTATIONS</h4>
-                                <p style="color: #a7f3d0 !important; font-size: 1.125rem !important;">Enregistrer les consultations</p>
+                                <h4 style="font-weight: bold !important; font-size: 1.5rem !important; margin-bottom: 0.75rem !important; color: white !important;">MES PATIENTS</h4>
+                                <p style="color: #a7f3d0 !important; font-size: 1.125rem !important;">Gérer mes patients</p>
                             </div>
                         </a>
                         @endif

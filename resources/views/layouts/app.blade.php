@@ -17,9 +17,10 @@
         
         <style>
             body {
-                background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(220, 38, 127, 0.8)), 
-                           url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="medical" patternUnits="userSpaceOnUse" width="100" height="100"><circle cx="50" cy="50" r="2" fill="%23ffffff" opacity="0.1"/><path d="M45 40h10v20h-10z" fill="%23ffffff" opacity="0.05"/><path d="M40 45h20v10h-20z" fill="%23ffffff" opacity="0.05"/></pattern></defs><rect width="100%25" height="100%25" fill="url(%23medical)"/></svg>');
-                background-size: cover, 100px 100px;
+                background: linear-gradient(rgba(30, 58, 138, 0.7), rgba(220, 38, 127, 0.6)), 
+                           url('https://cdn.pixabay.com/photo/2021/10/07/05/28/doctor-6687400_1280.jpg');
+                background-size: cover;
+                background-position: center;
                 background-attachment: fixed;
                 min-height: 100vh;
             }

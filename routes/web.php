@@ -7,7 +7,6 @@ use App\Http\Controllers\RendezVousController;
 use App\Http\Controllers\StockVaccinController;
 use App\Http\Controllers\PersonnelController;
 use App\Http\Controllers\Admin\PersonnelController as AdminPersonnelController;
-use App\Http\Controllers\Personnel\ConsultationController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -37,11 +36,6 @@ Route::middleware('auth')->group(function () {
     // Routes pour admin
     Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
         Route::resource('personnel', AdminPersonnelController::class);
-    });
-    
-    // Routes pour personnel
-    Route::middleware('personnel')->prefix('personnel')->name('personnel.')->group(function () {
-        Route::resource('consultations', ConsultationController::class);
     });
     
     Route::resource('patients', PatientController::class);

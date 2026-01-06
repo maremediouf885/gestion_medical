@@ -40,6 +40,15 @@
 
         <div>
             <label class="block text-lg font-bold text-gray-700 mb-3">
+                <i class="fas fa-at mr-2"></i>Nom d'utilisateur
+            </label>
+            <input type="text" name="username" value="{{ old('username', $user->username) }}" required 
+                   class="medical-input w-full text-lg" placeholder="admin">
+            @error('username') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
+        </div>
+
+        <div>
+            <label class="block text-lg font-bold text-gray-700 mb-3">
                 <i class="fas fa-envelope mr-2"></i>Adresse email
             </label>
             <input type="email" name="email" value="{{ old('email', $user->email) }}" required 

@@ -10,7 +10,7 @@ class AdminMiddleware
     public function handle(Request $request, Closure $next)
     {
         if (!auth()->check() || !auth()->user()->isAdmin()) {
-            abort(403, 'Accès refusé');
+            abort(403, 'Accès réservé aux administrateurs');
         }
 
         return $next($request);
