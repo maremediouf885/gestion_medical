@@ -16,9 +16,10 @@ class DefaultAdminSeeder extends Seeder
             'name' => 'Administrateur',
             'username' => 'admin',
             'password' => Hash::make('admin123'),
-            'role' => 'admin'
+            'role' => 'admin',
+            'email_verified_at' => now(),
         ]);
 
-        echo "Admin créé: admin@gestion-medical.com / admin123\n";
+        $this->command->info('✅ Admin créé: admin@gestion-medical.com / admin123');
     }
 }
