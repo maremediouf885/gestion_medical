@@ -36,6 +36,15 @@ Route::middleware('auth')->group(function () {
     // Routes pour admin
     Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
         Route::resource('personnel', AdminPersonnelController::class);
+        Route::get('reset-password', function () {
+            // Réinitialiser le mot de passe admin
+            $admin = \App\Models\User::where('email', 'admin@gestion-medical.com')->first();
+            if ($admin) {
+                $admin->update(['password' => \Illuminate\Support\Facades\Hash::make('admin123')]);
+                return back()->with('success', 'Mot de passe admin réinitialisé à admin123');
+            }
+            return back()->with('error', 'Admin non trouvé');
+        })->name('reset-password');
     });
     
     Route::resource('patients', PatientController::class);

@@ -10,7 +10,7 @@ class DefaultAdminSeeder extends Seeder
 {
     public function run()
     {
-        User::firstOrCreate([
+        $user = User::updateOrCreate([
             'email' => 'admin@gestion-medical.com'
         ], [
             'name' => 'Administrateur',
@@ -20,6 +20,6 @@ class DefaultAdminSeeder extends Seeder
             'email_verified_at' => now(),
         ]);
 
-        $this->command->info('✅ Admin créé: admin@gestion-medical.com / admin123');
+        $this->command->info('✅ Admin mis à jour/créé: admin@gestion-medical.com / admin123');
     }
 }
